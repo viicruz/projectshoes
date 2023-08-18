@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-
 type CardProps = {
   cardImage: string;
   productName?: string;
@@ -10,11 +9,24 @@ type CardProps = {
 
 export default function CardItems(props: CardProps) {
   return (
-    <div className="border-gray-500 border-2 w-[300px] h-[400px]">
-      <h1>{props.productName}</h1>
-      <Image alt="produto" width={100} height={100} src={props.cardImage || "/default.jpg"}/>
+    <div className=" w-[300px] h-[400px]">
+      <div className="w-14 flex justify-center bg-black text-white font-semibold rounded">
+        NOVO
+      </div>
 
-      <h2 className="flex flex-end">{props.priceTag}</h2>
+      <Image
+        alt="produto"
+        width={300}
+        height={400}
+        src={props.cardImage || "/default.jpg"}
+      />
+      <div className="border-b-2 "></div>
+      <div className="justify-center flex">
+        <h2>{props.productName}</h2>
+      </div>
+      <div className="justify-center flex">
+        <h3 className="text-3xl">{props.priceTag}</h3>
+      </div>
     </div>
   );
 }

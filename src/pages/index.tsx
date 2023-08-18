@@ -58,7 +58,7 @@ export default function Home() {
               containScroll: "trimSnaps",
             }}
           /> */}
-          <CardItems productName="Chuteira Nike Phantom" cardImage="/chut1.webp" priceTag="R$152,00"/>
+          <CardItems productName="Chuteira Nike Phantom" cardImage="/chut5.jpg" priceTag="R$152,00"/>
         </div>
       </div>
       
