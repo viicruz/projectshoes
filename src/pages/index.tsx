@@ -4,6 +4,7 @@ import ButtonBanner from "../components/ButtonBanner";
 import CTA from "../components/CTA";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CardItems from "@/components/CardItem";
 
 import EmblaCarousel from "../components/Carousel/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel-react";
@@ -48,15 +49,16 @@ export default function Home() {
           <ButtonBanner text="CONHECER O PACK" buttonColor="red" />
         </div>
       </div>
-      <div className="w-full flex justify-center items-cente">
+      <div className="w-full flex justify-center items-center">
         <div className="max-w-7xl">
-          <EmblaCarousel
+          {/* <EmblaCarousel
             slides={[1, 2, 3, 4, 5, 6]}
             options={{
               slidesToScroll: "auto",
               containScroll: "trimSnaps",
             }}
-          />
+          /> */}
+          <CardItems productName="Chuteira Nike Phantom" cardImage="/chut1.webp" priceTag="R$152,00"/>
         </div>
       </div>
       

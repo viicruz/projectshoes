@@ -32,7 +32,7 @@ export default function Footer({}: Props) {
           <div className="w-1/2 h-[2px] bg-white"></div>
           <ul className="text-gray-400 font-light">
             <li className="mb-1">Carreiras</li>
-            <li className="mb-1">A PUMA</li>
+            <li className="mb-1">A ProjectShoes</li>
             <li className="mb-1">Notícias Corporativas</li>
             <li className="mb-1">Imprensa</li>
             <li className="mb-1">Sustentabilidade</li>
