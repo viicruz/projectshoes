@@ -59,16 +59,12 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="w-full flex justify-center items-center mt-[200px]">
-        <p className="text-gray-900 font-light">
-          A ProjectShoes é uma loja de destaque no cenário da moda urbana,
-          reconhecida por oferecer uma ampla seleção de tênis de marcas
-          renomadas, com estilos únicos e uma qualidade excepcional.
-        </p>
-      </div>
-
       
-        <Footer />
+
+      <div className="mt-[200px]">
+      <Footer />
+      </div>
+        
      
     </main>
   );
