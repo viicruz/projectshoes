@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import ButtonBanner from "../components/ButtonBanner";
 import CTA from "../components/CTA";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 import EmblaCarousel from "../components/Carousel/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel-react";
@@ -58,6 +59,17 @@ export default function Home() {
           />
         </div>
       </div>
+      <div className="w-full flex justify-center items-center mt-[200px]">
+        <p className="text-gray-900 font-light">
+          A ProjectShoes é uma loja de destaque no cenário da moda urbana,
+          reconhecida por oferecer uma ampla seleção de tênis de marcas
+          renomadas, com estilos únicos e uma qualidade excepcional.
+        </p>
+      </div>
+
+      
+        <Footer />
+     
     </main>
   );
 }
