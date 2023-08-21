@@ -19,9 +19,9 @@ export default function ({}: Props) {
 
       <nav className="w-full h-20 bg-black flex items-center justify-between">
         <div className="ml-4 flex items-center">
-          <a href="#">
+          <Link href="/">
             <Image src="/logo.png" alt="Logo" width={80} height={40} />
-          </a>
+          </Link>
           <ul className="flex space-x-6 text-white ml-8">
             <li>
               <a

@@ -82,8 +82,8 @@ export default function Home() {
           src={"/Future_Q3_1.webp"}
         />
         <div className="flex w-[30%] absolute justify-between mt-20">
-          <ButtonBanner text="VER CHUTEIRAS" buttonColor="red" />
-          <ButtonBanner text="CONHECER O PACK" buttonColor="red" />
+          <ButtonBanner text="VER CHUTEIRAS" ButtonColor="red" />
+          <ButtonBanner text="CONHECER O PACK" ButtonColor="red" />
         </div>
       </div>
       <div className="justify-center flex">

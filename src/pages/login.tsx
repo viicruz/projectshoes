@@ -21,7 +21,7 @@ export default function Home() {
             <InputBar placeHolder="E-MAIL*" />
             <InputBar type="password" placeHolder="SENHA*" />
             <div className="ml-[6px] gap-4 flex">
-              <CommonButton buttonColor="yellow" text="ENTRAR" />
+              <CommonButton ButtonColor="yellow" text="ENTRAR" />
               <button className="underline">Esqueceu a Senha?</button>
             </div>
           </div>
@@ -37,7 +37,7 @@ export default function Home() {
             <InputBar type="password" placeHolder="SENHA*" />
             <InputBar type="password" placeHolder="CONFIRME SUA SENHA*" />
             <div className="ml-[6px]">
-              <CommonButton buttonColor="yellow" text="CRIAR CONTA" />
+              <CommonButton ButtonColor="yellow" text="CRIAR CONTA" />
             </div>
           </div>
         </div>
