@@ -1,18 +1,18 @@
-import React, { type ReactNode } from 'react'
-import { ShoppingCart, SignIn, MagnifyingGlass} from "phosphor-react";
-import Icon from "phosphor-react"
-type Buttonprops = {
-    name?:string
-    icon?:ReactNode
-}
+type ButtonProps = {
+    buttonColor?: string;
+    text: string;
+  };
+  
+  const Button = (props:ButtonProps) => {
+    return (
 
-export default function CommonButton(props:Buttonprops) {
-  return (
-    <button>
-       
-        {props.name}
-        {props.icon}
-     
-    </button>
-  )
-}
+      <button
+      className="border-white border-2 text-white font-semibold p-2 rounded w-[40%] bg-red-600 hover:bg-black">
+        {props.text}
+        
+      </button>
+    );
+  };
+  
+  export default Button;
+  

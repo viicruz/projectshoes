@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import SearchBar from "./SearchBar";
-import CommonButton from "./CommonButton";
+import CommonButton from "./IconButton";
 
 type Props = {};
 

@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InputBar from "@/components/InputBar";
-import { Placeholder } from "phosphor-react";
+import CommonButton from "@/components/CommonButton";
 
 export default function Home() {
   return (
@@ -15,20 +14,31 @@ export default function Home() {
 
       <div className="w-full h-[500px] flex justify-center mt-5">
         <div className="w-[500px] mx-4">
-          <h2 className="text-center font-semibold text-2xl border-b-2">Minha Conta</h2>
+          <h2 className="text-center font-semibold text-2xl border-b-2">
+            Minha Conta
+          </h2>
           <div>
-            <InputBar placeHolder="E-MAIL*"/>
-            <InputBar placeHolder="SENHA*"/>
+            <InputBar placeHolder="E-MAIL*" />
+            <InputBar type="password" placeHolder="SENHA*" />
+            <div className="ml-[6px] gap-4 flex">
+              <CommonButton buttonColor="yellow" text="ENTRAR" />
+              <button className="underline">Esqueceu a Senha?</button>
+            </div>
           </div>
         </div>
 
         <div className="w-[500px] mx-4">
-          <h2 className="text-center font-semibold text-2xl border-b-2">Criar Conta</h2>
+          <h2 className="text-center font-semibold text-2xl border-b-2">
+            Criar Conta
+          </h2>
           <div className="border-l-2 w-full h-[400px]">
-          <InputBar placeHolder="NOME*"/>
-          <InputBar placeHolder="E-MAIL*"/>
-          <InputBar placeHolder="SENHA*"/>
-          <InputBar placeHolder="CONFIRME SUA SENHA*"/>
+            <InputBar placeHolder="NOME*" />
+            <InputBar placeHolder="E-MAIL*" />
+            <InputBar type="password" placeHolder="SENHA*" />
+            <InputBar type="password" placeHolder="CONFIRME SUA SENHA*" />
+            <div className="ml-[6px]">
+              <CommonButton buttonColor="yellow" text="CRIAR CONTA" />
+            </div>
           </div>
         </div>
       </div>

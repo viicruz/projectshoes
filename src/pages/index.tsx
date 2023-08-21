@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import ButtonBanner from "../components/ButtonBanner";
+import ButtonBanner from "../components/CommonButton";
 import CTA from "../components/CTA";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
