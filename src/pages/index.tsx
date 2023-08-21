@@ -4,7 +4,7 @@ import ButtonBanner from "../components/ButtonBanner";
 import CTA from "../components/CTA";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import CardItems from "@/components/CardItem";
+
 
 import EmblaCarousel, {
   type Slide,
@@ -46,11 +46,12 @@ const slides: Slide[] = [
     price: "R$310,00",
   },
   {
-    image: "/chut1.avif",
+    image: "/chut1.webp",
     name: "ADIDAS FRIZZ X MESSI",
     price: "R$400,00",
   },
 ];
+
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
