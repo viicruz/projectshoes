@@ -3,6 +3,7 @@ import { ShoppingCart, SignIn, MagnifyingGlass} from "phosphor-react";
 import Image from "next/image";
 
 import SearchBar from './SearchBar';
+import CommonButton from './CommonButton';
 
 type Props = {}
 
@@ -61,9 +62,9 @@ export default function ({}: Props) {
           <SearchBar icon={MagnifyingGlass} />
         </div>
 
-        <div className="flex items-center space-x-4">
-          <ShoppingCart size={24} color="white" />
-          <SignIn size={24} color="white" />
+        <div className="space-x-4 mr-4">
+          <CommonButton icon={<ShoppingCart size={24} color='white'/>}/>
+          <CommonButton icon={<SignIn size={24} color='white'/>}/>
         </div>
       </div>
     </nav>

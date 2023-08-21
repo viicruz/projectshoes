@@ -3,7 +3,6 @@ import {
   FacebookLogo,
   InstagramLogo,
   TiktokLogo,
-  TwitterLogo,
   YoutubeLogo,
 } from "phosphor-react";
 
