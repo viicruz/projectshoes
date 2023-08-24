@@ -46,55 +46,68 @@ export default function SignIn() {
     <div className="border-l-2 w-full h-[400px]">
       <form className="gap-2 flex-col flex" onSubmit={handleSubmit(createUser)}>
         <input
-          className="w-full h-[50px] px-2 border-[1px]"
+          className={`w-full h-[50px] px-2 border-[1px] transition-all duration-300 ${
+            errors.formName ? "error" : ""
+          }`}
           placeholder="NOME*"
           {...register("formName")}
         />
         {errors.formName && (
-          <span className="text-red-600 ml-2">{errors.formName.message}</span>
+          <span className="text-[#dc347c] ml-2">{errors.formName.message}</span>
         )}
+
         <input
-          className="w-full h-[50px] px-2 border-[1px]"
+          className={`w-full h-[50px] px-2 border-[1px] transition-all duration-300 ${
+            errors.email ? "error" : ""
+          }`}
           type="email"
           placeholder="E-MAIL*"
           {...register("email")}
         />
         {errors.email && (
-          <span className="text-red-600 ml-2">{errors.email.message}</span>
+          <span className="text-[#dc347c] ml-2">{errors.email.message}</span>
         )}
+
         <input
-          className="w-full h-[50px] px-2 border-[1px]"
+          className={`w-full h-[50px] px-2 border-[1px] transition-all duration-300 ${
+            errors.formCpf ? "error" : ""
+          }`}
           type="text"
           placeholder="CPF*"
           {...register("formCpf")}
         />
         {errors.formCpf && (
-          <span className="text-red-600 ml-2">{errors.formCpf.message}</span>
+          <span className="text-[#dc347c] ml-2">{errors.formCpf.message}</span>
         )}
+
         <input
-          className="w-full h-[50px] px-2 border-[1px]"
+          className={`w-full h-[50px] px-2 border-[1px] transition-all duration-300 ${
+            errors.password ? "error" : ""
+          }`}
           type="password"
           placeholder="SENHA*"
           {...register("password")}
         />
         {errors.password && (
-          <span className="text-red-600 ml-2">{errors.password.message}</span>
+          <span className="text-[#dc347c] ml-2">{errors.password.message}</span>
         )}
+
         <input
-          className="w-full h-[50px] px-2 border-[1px]"
+          className={`w-full h-[50px] px-2 border-[1px] transition-all duration-300 ${
+            errors.confirmPassword ? "error" : ""
+          }`}
           type="password"
           placeholder="CONFIRME SUA SENHA*"
           {...register("confirmPassword")}
         />
         {errors.confirmPassword && (
-          <span className="text-red-600 ml-2">
+          <span className="text-[#dc347c] ml-2">
             {errors.confirmPassword.message}
           </span>
         )}
 
         <div className="ml-[6px]">
           <CommonButton text="CRIAR CONTA" />
-          
         </div>
       </form>
     </div>

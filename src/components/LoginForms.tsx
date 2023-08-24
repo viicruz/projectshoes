@@ -38,25 +38,29 @@ export default function Login() {
           action="submit"
         >
           <input
-            className="w-full h-[50px] px-2 border-[1px]"
+            className={`w-full h-[50px] px-2 border-[1px] transition-all duration-300 ${
+              errors.loginEmail ? "error" : ""
+            }`}
             type="email"
             placeholder="E-MAIL*"
             {...register("loginEmail")}
           />
 
           {errors.loginEmail && (
-            <span className="text-red-600 ml-2">
+            <span className="text-[#dc347c] ml-2">
               {errors.loginEmail.message}
             </span>
           )}
           <input
-            className="w-full h-[50px] px-2 border-[1px]"
+            className={`w-full h-[50px] px-2 border-[1px] transition-all duration-300 ${
+              errors.loginEmail ? "error" : ""
+            }`}
             type="password"
             placeholder="SENHA*"
             {...register("loginPassword")}
           />
           {errors.loginPassword && (
-            <span className="text-red-600 ml-2">
+            <span className="text-[#dc347c] ml-2">
               {errors.loginPassword.message}
             </span>
           )}
