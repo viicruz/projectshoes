@@ -1,6 +1,9 @@
 //Components Imports
 import CommonButton from "@/components/CommonButton";
 
+
+
+
 //Libraries Imports
 import { useState } from "react";
 import z from "zod";
@@ -27,6 +30,7 @@ export default function Login() {
 
   function loginUser(data: any) {
     setOutput(JSON.stringify(data, null, 2));
+
   }
 
   return (
@@ -66,7 +70,7 @@ export default function Login() {
           )}
 
           <div className="ml-[6px] gap-4 flex">
-            <CommonButton ButtonColor="yellow" text="ENTRAR" />
+            <CommonButton text="ENTRAR"/>
             <button className="underline">Esqueceu a Senha?</button>
           </div>
         </form>
