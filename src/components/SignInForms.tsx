@@ -2,9 +2,10 @@ import CommonButton from "@/components/CommonButton";
 
 //Libraries Imports
 import { useState } from "react";
-import z from "zod";
+import z, { ZodNull } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import InputMask from "react-input-mask";
 
 type Props = {};
 const schema = z
@@ -20,14 +21,15 @@ const schema = z
       .max(20, "O nome do usuário deve conter no máximo 20 caracteres"),
     formCpf: z
       .string()
-      .min(11, "Cpf deve conter 11 characteres")
-      .max(11, "Cpf deve conter 11 characteres"),
+      .min(14, "Cpf deve conter 11 characteres")
+      .max(14, "Cpf deve conter 11 characteres"),
     confirmPassword: z.string().min(8, "Por favor confira a senha"),
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: "As senhas não coincidem",
     path: ["confirmPassword"],
   });
+
 type SchemaType = z.infer<typeof schema>;
 
 export default function SignIn() {
@@ -42,6 +44,7 @@ export default function SignIn() {
   function createUser(data: any) {
     setOutput(JSON.stringify(data, null, 2));
   }
+
   return (
     <div className="border-l-2 w-full h-[400px]">
       <form className="gap-2 flex-col flex" onSubmit={handleSubmit(createUser)}>
@@ -68,7 +71,9 @@ export default function SignIn() {
           <span className="text-[#dc347c] ml-2">{errors.email.message}</span>
         )}
 
-        <input
+        <InputMask
+          mask={"999-999-999.99"}
+          maskChar={null}
           className={`w-full h-[50px] px-2 border-[1px] transition-all duration-300 ${
             errors.formCpf ? "error" : ""
           }`}
