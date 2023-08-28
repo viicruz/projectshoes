@@ -1,8 +1,8 @@
 //Components Imports
 import CommonButton from "@/components/CommonButton";
 
-
-
+//Hooks Imports
+import {useRouter} from "next/navigation";
 
 //Libraries Imports
 import { useState } from "react";
@@ -28,9 +28,11 @@ export default function Login() {
   } = useForm<SchemaType>({ resolver: zodResolver(schema) });
   const [output, setOutput] = useState("");
 
+  const navigation = useRouter();
+
   function loginUser(data: any) {
     setOutput(JSON.stringify(data, null, 2));
-
+    navigation.push("/dashboard");
   }
 
   return (

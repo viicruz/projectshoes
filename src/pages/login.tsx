@@ -2,7 +2,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LoginForms from "@/components/LoginForms";
-import SignInForms from "@/components/SignInForms";
+import SignInForms from "@/components/SignUp";
 
 //Libraries Imports
 
