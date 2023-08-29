@@ -1,11 +1,16 @@
-import React from 'react'
+import LateralBar from "@/components/LateralBar";
 
-type Props = {}
 
-export default function dashboard({}: Props) {
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+export default function Home() {
   return (
-    <div>
-        <h1 className='text-7xl text-red-700'>DASHBOARD</h1>
-    </div>
-  )
+    <main className="w-full min-h-screen">
+      <div>
+        <LateralBar/>
+      </div>
+
+    </main>
+  );
 }
