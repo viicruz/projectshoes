@@ -12,7 +12,7 @@ export default function LateralBar({ }: Props) {
 
         <div className='bg-gray-200 w-80 min-h-screen flex flex-col'>
             <h1 className='font-bold text-4xl justify-center flex mt-2'>Project Shoes</h1>
-            <div className=''>
+            <div className='w-full h-full relative flex-1'>
 
                 <Accordion.Root
                     type="multiple"
@@ -25,7 +25,7 @@ export default function LateralBar({ }: Props) {
                             </Accordion.Trigger>
                         </Accordion.Header>
                         <Accordion.Content className="flex flex-col items-start justify-start bg-gray-300/10 AccordionContent">
-                           
+
                             <button className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg  font-bold">
                                 Visão Geral
                             </button>
@@ -45,7 +45,7 @@ export default function LateralBar({ }: Props) {
                             </Accordion.Trigger>
                         </Accordion.Header>
                         <Accordion.Content className="flex flex-col items-start justify-start bg-gray-300/10 AccordionContent">
-                           
+
                             <button className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg  font-bold">
                                 Dados de vendas
                             </button>
@@ -58,12 +58,16 @@ export default function LateralBar({ }: Props) {
                         </Accordion.Content>
                     </Accordion.Item>
                 </Accordion.Root>
+                <div className='w-full flex absolute bottom-0 left-0 justify-center items-end pb-5'>
+                    <button className='w-[80%] h-8 bg-orange-400 text-white text-center rounded-lg hover:bg-orange-500 font-semibold font-sans'>Ir ao Site</button>
 
+                </div>
 
             </div>
-            <div className='w-full flex h-full justify-center items-end'>
-                <button className='w-[80%] h-8 bg-orange-400 text-white text-center rounded-lg hover:bg-orange-500 font-semibold font-sans'>Ir ao Site</button>
-            </div>
+
+
+
+
         </div>
     )
 }
