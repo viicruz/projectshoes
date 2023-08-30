@@ -1,16 +1,17 @@
 import LateralBar from "@/components/LateralBar";
-
-
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+import Charts from "@/components/Charts"
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen">
-      
-        <LateralBar/>
-     
-
+    <main className="w-full min-h-screen flex">
+      <div>
+        <LateralBar />
+      </div>
+      <div className="flex-grow flex justify-center items-start">
+        <Charts />
+      </div>
     </main>
   );
 }
+
+
