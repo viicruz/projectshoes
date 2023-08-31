@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonCTA from "./ButtonCTA";
+import ButtonCTA from "../../Common/ButtonCTA";
 
 type Props = {};
 

@@ -7,6 +7,12 @@ body {
   overflow-x:hidden;
 }
 
+input.error {
+  border-color: rgb(220,52,124);
+  color:rgba(236,72,153,255);
+}
+
 
 @import url("./sandbox.css");
 @import url("./embla.css");
+@import url("./accordion.css");
