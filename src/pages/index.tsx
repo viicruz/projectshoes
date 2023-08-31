@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import ButtonBanner from "../components/CommonButton";
-import CTA from "../components/CTA";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import ButtonBanner from "../components/Common/CommonButton";
+import CTA from "../components/specific/CTA";
+import Header from "@/components/Common/Header";
+import Footer from "@/components/Common/Footer";
 
 
 import EmblaCarousel, {

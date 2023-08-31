@@ -47,24 +47,24 @@ export default function LateralBar({ }: Props) {
                         <Accordion.Content className="flex flex-col items-start justify-start bg-gray-300/10 AccordionContent">
 
                             <div className='flex flex-col'>
-                            <button className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg text-start  font-bold">
-                                Dados de vendas
-                            </button>
-                            <button className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg text-start  font-bold">
-                                Gráficos Detalhados
-                            </button>
-                            <button className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg text-start  font-bold">
-                                Percentual Trimestral
-                            </button>
+                                <button className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg text-start  font-bold">
+                                    Dados de vendas
+                                </button>
+                                <button className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg text-start  font-bold">
+                                    Gráficos Detalhados
+                                </button>
+                                <button className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg text-start  font-bold">
+                                    Percentual Trimestral
+                                </button>
                             </div>
                         </Accordion.Content>
                     </Accordion.Item>
                 </Accordion.Root>
-                
-                    <Link className='w-full flex absolute bottom-0 left-0 justify-center items-end pb-5' href="/">
+
+                <Link className='w-full flex absolute bottom-0 left-0 justify-center items-end pb-5' href="/">
                     <button className='w-[80%] h-8 bg-orange-400 text-white text-center rounded-lg hover:bg-orange-500 font-semibold font-sans'>Ir ao Site</button>
-                    </Link>
-                
+                </Link>
+
             </div>
         </div>
     )

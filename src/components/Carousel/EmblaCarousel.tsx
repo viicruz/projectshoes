@@ -7,7 +7,7 @@ import {
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
 import imageByIndex from "../Carousel/ImageByIndex";
-import CardItem from "../CardItem"; // Importando o componente CardItem
+import CardItem from "../Common/CardItem"; // Importando o componente CardItem
 
 type PropType = {
   slides: Slide[];

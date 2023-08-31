@@ -1,8 +1,8 @@
 //Components Imports
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import LoginForms from "@/components/LoginForms";
-import SignInForms from "@/components/SignUp";
+import Header from "@/components/Common/Header";
+import Footer from "@/components/Common/Footer";
+import LoginForms from "@/components/specific/LoginForms";
+import SignInForms from "@/components/specific/SignUpForms";
 
 //Libraries Imports
 

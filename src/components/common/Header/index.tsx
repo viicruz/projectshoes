@@ -3,8 +3,8 @@ import { ShoppingCart, SignIn, MagnifyingGlass } from "phosphor-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import SearchBar from "./SearchBar";
-import CommonButton from "./IconButton";
+import SearchBar from "../SearchBar";
+import CommonButton from "../IconButton";
 
 type Props = {};
 

@@ -1,5 +1,5 @@
-import LateralBar from "@/components/LateralBar";
-import Charts from "@/components/Charts"
+import LateralBar from "@/components/specific/LateralBar";
+import Charts from "@/components/specific/Charts"
 
 export default function Home() {
   return (
