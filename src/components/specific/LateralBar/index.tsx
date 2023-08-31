@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from "next/link";
 
 //Libraries Imports
 import * as Accordion from '@radix-ui/react-accordion';
+import { CaretDown, CaretUp } from 'phosphor-react';
 
 type Props = {}
 
 export default function LateralBar({ }: Props) {
+
+    const [iconChange, setIconChange] = useState<boolean>(false);
+    const [iconChangeSale, setIconChangeSale] = useState<boolean>(false);
+    const handleIconChange = () => {
+        setIconChange(prevState => !prevState);
+    }
+    const handleIconChangeSale = () => {
+        setIconChangeSale(prevState => !prevState);
+    }
+
     return (
         <div className='bg-gray-200 w-80 min-h-screen flex flex-col'>
             <h1 className='font-bold text-4xl justify-center flex mt-2'>Project Shoes</h1>
@@ -17,9 +28,14 @@ export default function LateralBar({ }: Props) {
                     className="flex flex-col items-start justify-start w-full h-full gap-2 mt-8"
                 >
                     <Accordion.Item value="item-1-calçados" className="w-full p-2 border border-black/10 rounded-xl">
+
                         <Accordion.Header className="items-start justify-start w-full">
                             <Accordion.Trigger className="items-start justify-start w-full">
-                                <h2 className="w-full text-2xl font-bold ml-3 text-start">Calçados</h2>
+                                <div className='flex items-center' onClick={handleIconChange}>
+                                    <h2 className="w-full text-2xl font-bold ml-3 text-start">Calçados</h2>
+                                    {iconChange ? <CaretUp size={24} /> : <CaretDown size={24} />}
+                                </div>
+
                             </Accordion.Trigger>
                         </Accordion.Header>
                         <Accordion.Content className="flex flex-col items-start justify-start bg-gray-300/10 AccordionContent">
@@ -41,7 +57,10 @@ export default function LateralBar({ }: Props) {
                     <Accordion.Item value="item-2-vendas" className="w-full p-2 border border-black/10 rounded-xl">
                         <Accordion.Header className="items-start justify-start w-full">
                             <Accordion.Trigger className="items-start justify-start w-full">
-                                <h2 className="w-full text-2xl font-bold ml-3 text-start">Vendas</h2>
+                                <div className='flex items-center' onClick={handleIconChangeSale}>
+                                    <h2 className="w-full text-2xl font-bold ml-3 text-start">Vendas</h2>
+                                    {iconChangeSale ? <CaretUp size={24} /> : <CaretDown size={24} />}
+                                </div>
                             </Accordion.Trigger>
                         </Accordion.Header>
                         <Accordion.Content className="flex flex-col items-start justify-start bg-gray-300/10 AccordionContent">
