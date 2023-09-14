@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Link from "next/link";
+import {useRouter} from "next/navigation";
 
 //Libraries Imports
 import * as Accordion from '@radix-ui/react-accordion';
@@ -17,6 +18,8 @@ export default function LateralBar({ }: Props) {
     const handleIconChangeSale = () => {
         setIconChangeSale(prevState => !prevState);
     }
+
+    const navigation = useRouter();
 
     return (
         <div className='bg-gray-200 w-80 min-h-screen flex flex-col'>
@@ -43,7 +46,9 @@ export default function LateralBar({ }: Props) {
                                 <button className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg text-start font-bold">
                                     Visão Geral
                                 </button>
-                                <button className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg text-start font-bold">
+                                <button onClick={()=>{
+                                   navigation.push("/addShoes");
+                                }} className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg text-start font-bold">
                                     Cadastrar Calçado
                                 </button>
                                 <button className="w-full py-2 px-4 my-1 hover:bg-gray-300 rounded-lg text-start font-bold">
