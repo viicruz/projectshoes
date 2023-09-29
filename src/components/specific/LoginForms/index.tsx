@@ -1,5 +1,5 @@
 //Components Imports
-import CommonButton from "@/components/Common/CommonButton";
+import CommonButton from "../../common/CommonButton";
 
 //Hooks Imports
 import {useRouter} from "next/navigation";

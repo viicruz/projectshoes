@@ -8,7 +8,7 @@ import CommonButton from "../IconButton";
 
 type Props = {};
 
-export default function ({}: Props) {
+export default function Header ({ }: Props) {
   return (
     <header>
       <div className="bg-yellow-600 w-full h-10 flex justify-center items-center">

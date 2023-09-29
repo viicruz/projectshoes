@@ -1,12 +1,29 @@
 //Components Imports
-import Header from "@/components/Common/Header";
-import Footer from "@/components/Common/Footer";
+import Header from "../../src/components/common/Header";
+import Footer from "../../src/components/common/Footer";
 import LoginForms from "@/components/specific/LoginForms";
 import SignInForms from "@/components/specific/SignUpForms";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {auth} from "../firebase/firebaseConfig";
+
+//Hook imports
+import {useRouter} from "next/navigation";
 
 //Libraries Imports
 
 export default function Login() {
+
+
+  const handleGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider).then(()=>{
+      navigation.push('/dashboard')
+    })
+    
+  }
+
+  const navigation = useRouter();
+
   return (
     <main className="w-full min-h-screen">
       <Header />
@@ -22,6 +39,7 @@ export default function Login() {
           </h2>
 
           <LoginForms />
+          <button className="bg-red-700 text-white" onClick={handleGoogle}>Login com o google</button>
         </div>
 
         <div className="w-[500px] mx-4">
