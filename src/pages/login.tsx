@@ -3,23 +3,25 @@ import Header from "../../src/components/common/Header";
 import Footer from "../../src/components/common/Footer";
 import LoginForms from "@/components/specific/LoginForms";
 import SignInForms from "@/components/specific/SignUpForms";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import {auth} from "../firebase/firebaseConfig";
 
 //Hook imports
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
 
 //Libraries Imports
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "../firebase/firebaseConfig";
+import { GoogleLogo } from "phosphor-react"
+
 
 export default function Login() {
 
 
   const handleGoogle = async () => {
     const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider).then(()=>{
+    signInWithPopup(auth, provider).then(() => {
       navigation.push('/dashboard')
     })
-    
+
   }
 
   const navigation = useRouter();
@@ -39,7 +41,13 @@ export default function Login() {
           </h2>
 
           <LoginForms />
-          <button className="bg-red-700 text-white" onClick={handleGoogle}>Login com o google</button>
+          <div className="w-full ">
+            <button className="bg-gray-500 text-white hover:bg-black text-LG w-[39%] h-10 rounded-sm flex p-2 text-center gap-1 ml-2 mt-2" onClick={handleGoogle}>
+              <GoogleLogo size={24} />
+              Login com Google
+            </button>
+          </div>
+
         </div>
 
         <div className="w-[500px] mx-4">
